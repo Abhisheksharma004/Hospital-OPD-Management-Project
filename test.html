@@ -1,0 +1,117 @@
+<table class="design-table">
+          <tr>
+            <th>ID</th>
+            <th>Patient Id</th>
+            <th>Date/Time</th>
+            <th>Pt. Name</th>
+            <th>Parent Name</th>
+            <th>Age</th>
+            <th>Blood Presser</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Gender</th>
+            <th>Doctor's</th>
+            <th>Fees</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <tbody>
+
+            <?php
+              include 'db_con.php';
+
+              $selectquery = " select * from adopd ";
+
+              $query = mysqli_query($con, $selectquery);
+
+              $nums = mysqli_num_rows($query);
+
+              while ($res = mysqli_fetch_array($query)) {
+                // code...
+                  ?>
+
+
+                <tr>
+                 <td> <?php echo $res['id']; ?> </td>
+                 <td> <?php echo $res['invoiceid']; ?> </td>
+                 <td> <?php echo $res['date']; ?> </td>
+                 <td> <?php echo $res['ptname']; ?> </td>
+                 <td> <?php echo $res['parname']; ?> </td>
+                 <td> <?php echo $res['age']; ?> </td>
+                 <td> <?php echo $res['bp']; ?> </td>
+                 <td> <?php echo $res['address']; ?> </td>
+                 <td> <?php echo $res['contact']; ?> </td>
+                 <td> <?php echo $res['gender']; ?> </td>
+                 <td> <?php echo $res['doctor']; ?> </td>
+                 <td> <?php echo $res['fees']; ?> </td>
+                 <td><button>Update</button></td>
+                 <td><button>Delete</button></td>
+                </tr>
+            <?php 
+               
+              }
+
+
+            ?>
+
+          </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+        <table class="design-table">
+          <tr>
+            <th>ID</th>
+            <th>Patation Id</th>
+            <th>Date</th>
+            <th>Pt. Name</th>
+            <th>Parent Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+         <tbody>
+
+            <?php
+              include 'db_con.php';
+
+              $selectquery = " select * from ademg ";
+
+              $query = mysqli_query($con, $selectquery);
+
+              $nums = mysqli_num_rows($query);
+
+              while ($res = mysqli_fetch_array($query)) {
+                // code...
+                  ?>
+
+
+                <tr>
+                 <td> <?php echo $res['id']; ?> </td>
+                 <td> <?php echo $res['invoiceid']; ?> </td>
+                 <td> <?php echo $res['date']; ?> </td>
+                 <td> <?php echo $res['ptname']; ?> </td>
+                 <td> <?php echo $res['parname']; ?> </td>
+                 <td> <?php echo $res['age']; ?> </td>
+                 <td> <?php echo $res['address']; ?> </td>
+                 <td> <?php echo $res['contact']; ?> </td>
+                 <td><button>Update</button></td>
+                 <td><button>Delete</button></td>
+                </tr>
+            <?php 
+               
+              }
+
+
+            ?>
+
+          </tbody>
+        </table>
