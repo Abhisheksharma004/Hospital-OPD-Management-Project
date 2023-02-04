@@ -7,7 +7,6 @@
   <title>Dropdown Menu with Search Box | CodingNepal</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/viewOPD.css">
-
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -26,9 +25,9 @@
             <label for="show-features">Features</label>
             <ul>
               <li><a href="addOPD.php">Add New OPD Pt.</a></li>
-              <li><a href="#">Add Renewal OPD Pt.</a></li>
+              <li><a href="addrenueopd.php">Add Renewal OPD Pt.</a></li>
               <li><a href="viewOPD.php">Viwe OPD Pt.</a></li>
-              <li><a href="#">View Renewal OPD Pt.</a></li>
+              <li><a href="viewrenueopd.php">View Renewal OPD Pt.</a></li>
             </ul>
           </li>
 
@@ -39,8 +38,8 @@
             <ul>
               <li><a href="addEMG.php">Add Emg. Pt.</a></li>
               <li><a href="viewEMG.php">Viwe Emg. Pt.</a></li>
-              <li><a href="#">Discharge Pt.</a></li>
-              <li><a href="#">View Discharge Pt.</a></li>
+              <li><a href="adddischarge.php">Discharge Pt.</a></li>
+              <li><a href="viewDischarge.php">View Discharge Pt.</a></li>
             </ul>
           </li>
 
@@ -61,13 +60,13 @@
     </nav>
   </div>
 
-  <center><h1 style="padding-top: 75px; background-color:#4d5b72 ; color:#fff;">OPD Pt. List</h1></center>
+  <center><h1 style="padding-top: 75px; background-color:#4d5b72 ; color:#fff;">OPD Patient's. List</h1></center>
   <table class="design-table" style="background-color:#171c24;">
           <tr>
-            <th>ID</th>
+            <!-- <th>ID</th> -->
             <th>Patient Id</th>
             <th>Date/Time</th>
-            <th>Pt. Name</th>
+            <th>Patient. Name</th>
             <th>Parent Name</th>
             <th>Age</th>
             <th>Blood Presser</th>
@@ -76,15 +75,15 @@
             <th>Gender</th>
             <th>Doctor's</th>
             <th>Fees</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th>User Operator</th>
+            <th colspan="3";>Action</th>
           </tr>
           <tbody>
 
             <?php
               include 'db_con.php';
 
-              $selectquery = " select * from adopd ";
+              $selectquery = " select * from adopd ORDER BY id DESC";
 
               $query = mysqli_query($con, $selectquery);
 
@@ -96,7 +95,7 @@
 
 
                 <tr>
-                 <td> <?php echo $res['id']; ?> </td>
+                 <!-- <td> <?php echo $res['id']; ?> </td> -->
                  <td> <?php echo $res['invoiceid']; ?> </td>
                  <td> <?php echo $res['date']; ?> </td>
                  <td> <?php echo $res['ptname']; ?> </td>
@@ -108,8 +107,11 @@
                  <td> <?php echo $res['gender']; ?> </td>
                  <td> <?php echo $res['doctor']; ?> </td>
                  <td> <?php echo $res['fees']; ?> </td>
-                 <td><button>Update</button></td>
-                 <td><button>Delete</button></td>
+                 <td> <?php echo $res['user']; ?> </td>
+
+                 <td><a href="opdprint.php?id=<?php echo $res['id']; ?>" title="OPD Print"><i class="fas fa-print opdprint"></i></a></td>
+                 <td><a href="" title="UPDATE"><i class="fas fa-edit billprint"></i></a></td>
+                 <td><a href="opddelete.php?id=<?php echo $res['id']; ?>" title="DELETE"><i class="fas fa-trash"></i></a></td>
                 </tr>
             <?php 
                

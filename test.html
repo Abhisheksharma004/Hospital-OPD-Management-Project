@@ -115,3 +115,35 @@
 
           </tbody>
         </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (isset($_POST['search'])) {
+          $searchid = $_POST['searchid'];
+          $serchquery = "SELECT * FROM adopd WHERE invoiceid='$invoiceid'";
+          $queryrun = mysqli_query($con, $serchquery);
+        
+          if(mysqli_num_rows($queryrun) > 0){
+            while($rows = mysqli_fetch_array($queryrun)){
+              echo $rows['name'];
+            }
+          }else{
+            echo "No Record Found...";
+          }
+        
+        
+        }
+        

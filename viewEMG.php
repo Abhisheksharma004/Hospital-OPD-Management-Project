@@ -26,9 +26,9 @@
             <label for="show-features">Features</label>
             <ul>
               <li><a href="addOPD.php">Add New OPD Pt.</a></li>
-              <li><a href="#">Add Renewal OPD Pt.</a></li>
+              <li><a href="addrenueopd.php">Add Renewal OPD Pt.</a></li>
               <li><a href="viewOPD.php">Viwe OPD Pt.</a></li>
-              <li><a href="#">View Renewal OPD Pt.</a></li>
+              <li><a href="viewrenueopd.php">View Renewal OPD Pt.</a></li>
             </ul>
           </li>
 
@@ -39,8 +39,8 @@
             <ul>
               <li><a href="addEMG.php">Add Emg. Pt.</a></li>
               <li><a href="viewEMG.php">Viwe Emg. Pt.</a></li>
-              <li><a href="#">Discharge Pt.</a></li>
-              <li><a href="#">View Discharge Pt.</a></li>
+              <li><a href="adddischarge.php">Discharge Pt.</a></li>
+              <li><a href="viewDischarge.php">View Discharge Pt.</a></li>
             </ul>
           </li>
 
@@ -73,15 +73,14 @@
             <th>Age</th>
             <th>Address</th>
             <th>Contact</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th colspan="3";>Action</th>
           </tr>
          <tbody>
 
             <?php
               include 'db_con.php';
 
-              $selectquery = " select * from ademg ";
+              $selectquery = " select * from ademg ORDER BY id DESC";
 
               $query = mysqli_query($con, $selectquery);
 
@@ -101,7 +100,7 @@
                  <td> <?php echo $res['age']; ?> </td>
                  <td> <?php echo $res['address']; ?> </td>
                  <td> <?php echo $res['contact']; ?> </td>
-                 <td><button>Update</button></td>
+                 <td><button>Print</button></td>
                  <td><button>Delete</button></td>
                 </tr>
             <?php 
@@ -113,6 +112,5 @@
 
           </tbody>
         </table>
-
 </body>
 </html>

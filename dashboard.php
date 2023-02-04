@@ -25,7 +25,7 @@
       <input type="checkbox" id="show-menu">
       <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
       <div class="content">
-      <div class="logo"><a href="#">Admin Dashboard</a></div>
+      <div class="logo"><a href="#">Dashboard</a></div>
         <ul class="links">
           <li><a href="dashboard.php">Home</a></li>
           <li>
@@ -34,9 +34,9 @@
             <label for="show-features">Features</label>
             <ul>
               <li><a href="addOPD.php">Add New OPD Pt.</a></li>
-              <li><a href="#">Add Renewal OPD Pt.</a></li>
+              <li><a href="addrenueopd.php">Add Renewal OPD Pt.</a></li>
               <li><a href="viewOPD.php">Viwe OPD Pt.</a></li>
-              <li><a href="#">View Renewal OPD Pt.</a></li>
+              <li><a href="viewrenueopd.php">View Renewal OPD Pt.</a></li>
             </ul>
           </li>
 
@@ -47,8 +47,8 @@
             <ul>
               <li><a href="addEMG.php">Add Emg. Pt.</a></li>
               <li><a href="viewEMG.php">Viwe Emg. Pt.</a></li>
-              <li><a href="#">Discharge Pt.</a></li>
-              <li><a href="#">View Discharge Pt.</a></li>
+              <li><a href="adddischarge.php">Discharge Pt.</a></li>
+              <li><a href="viewDischarge.php">View Discharge Pt.</a></li>
             </ul>
           </li>
 
@@ -86,9 +86,7 @@
           <li><a href="adminlogout.php">Logout</a></li>
         </ul>
       </div>
-      <label for="" class="someone-class">
-       Admin 
-      </label>
+      <label for="" class="someone-class">Some One There</label>
     </nav>
   </div>
 

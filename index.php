@@ -35,7 +35,7 @@
             <input type="checkbox" id="show-services">
             <label for="show-services">Services</label>
           </li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Help?</a></li>
         </ul>
       </div>
     </nav>

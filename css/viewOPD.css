@@ -10,7 +10,9 @@
   background: #171c24;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
+
 .wrapper nav{
   position: relative;
   display: flex;
@@ -300,11 +302,25 @@ nav .content .links{
   background-color: rgb(131, 130, 128);
 }
 
+
+.design-table tr td a{
+  font-size: 30px;
+  color: #970a0a;
+}
+
+.design-table tr td a .opdprint{
+  color: rgb(24, 244, 8);
+}
+
+.design-table tr td a .billprint{
+  color: rgb(27, 235, 141);
+}
+
 .design-table tr td button{
   width: 100%;
-  height: 30px;
+  height: 100%;
   border: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: rgb(4, 110, 31);
   color: #fff;
   opacity: 0.5;
@@ -313,6 +329,7 @@ nav .content .links{
 .design-table tr td button:hover{
   opacity: 1;
   border: 1px solid rgb(2, 252, 2);
+  cursor: pointer;
 }
 .design-table tr,td:nth-child(odd){
   background-color: #3910a8;

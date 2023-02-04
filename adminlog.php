@@ -77,23 +77,12 @@
       <div class="logo"><a href="#">Hospital OPD Project | Jyoti Info Tech.</a></div>
         <ul class="links">
           <li><a href="index.php">Home</a></li>
-          <!-- <li>
-            <a href="#" class="desktop-link">Features</a>
-            <input type="checkbox" id="show-features">
-            <label for="show-features">Features</label>
-            <ul>
-              <li><a href="#">Drop Menu 1</a></li>
-              <li><a href="#">Drop Menu 2</a></li>
-              <li><a href="#">Drop Menu 3</a></li>
-              <li><a href="#">Drop Menu 4</a></li>
-            </ul>
-          </li> -->
           <li>
             <a href="adminlog.php" class="desktop-link">Login</a>
             <input type="checkbox" id="show-services">
             <label for="show-services">Services</label>
           </li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Help?</a></li>
         </ul>
       </div>
     </nav>

@@ -74,9 +74,10 @@ if (isset($_POST['opdsubmit'])) {
     $gender = mysqli_real_escape_string($con, $_POST['opdgender']);
     $doctor = mysqli_real_escape_string($con, $_POST['opddr']);
     $fees = mysqli_real_escape_string($con, $_POST['opdfee']);
+    $user = $_SESSION['username'] ;
     
 
-    $insertquery = " insert into adopd(invoiceid, date, ptname, parname, age, bp, address, contact, gender, doctor, fees) values('$invoiceid', '$date', '$ptname','$prname', '$age', '$bp', '$address', '$mobile', '$gender', '$doctor', '$fees') ";
+    $insertquery = " insert into adopd(invoiceid, date, ptname, parname, age, bp, address, contact, gender, doctor, fees, user) values('$invoiceid', '$date', '$ptname','$prname', '$age', '$bp', '$address', '$mobile', '$gender', '$doctor', '$fees', '$user') ";
 
     $res = mysqli_query($con, $insertquery);
    
@@ -87,10 +88,8 @@ if (isset($_POST['opdsubmit'])) {
 
           <script>
             alert("OPD Add Sucessfuly");
+            location.replace("viewOPD.php");
           </script>
-          <?php
-            header('location:viewOPD.php');
-          ?>
 
         <?php
       }else{
@@ -131,9 +130,9 @@ if (isset($_POST['opdsubmit'])) {
             <label for="show-features">Features</label>
             <ul>
               <li><a href="addOPD.php">Add New OPD Pt.</a></li>
-              <li><a href="#">Add Renewal OPD Pt.</a></li>
+              <li><a href="addrenueopd.php">Add Renewal OPD Pt.</a></li>
               <li><a href="viewOPD.php">Viwe OPD Pt.</a></li>
-              <li><a href="#">View Renewal OPD Pt.</a></li>
+              <li><a href="viewrenueopd.php">View Renewal OPD Pt.</a></li>
             </ul>
           </li>
 
@@ -144,8 +143,8 @@ if (isset($_POST['opdsubmit'])) {
             <ul>
               <li><a href="addEMG.php">Add Emg. Pt.</a></li>
               <li><a href="viewEMG.php">Viwe Emg. Pt.</a></li>
-              <li><a href="#">Discharge Pt.</a></li>
-              <li><a href="#">View Discharge Pt.</a></li>
+              <li><a href="adddischarge.php">Discharge Pt.</a></li>
+              <li><a href="viewDischarge.php">View Discharge Pt.</a></li>
             </ul>
           </li>
 
@@ -199,7 +198,6 @@ if (isset($_POST['opdsubmit'])) {
           <select class="input-field" name="opddr" id="">
             <option class="input-field-opt" value="NA">Doctor's*</option>
             <?php
-
               $selectquery = " select * from doctors ";
 
               $query = mysqli_query($con, $selectquery);
