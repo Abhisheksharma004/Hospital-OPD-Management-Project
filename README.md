@@ -71,3 +71,74 @@ The **Hospital OPD Management Project** is a comprehensive, web-based applicatio
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Abhisheksharma004/Hospital-OPD-Management-Project.git
+
+
+
+# 📄 Privacy Policy
+
+Last Updated: 13/11/2024
+
+## Introduction
+This Privacy Policy explains how we collect, use, and protect your information when you use the **Hospital OPD Management Project**. By using this application, you agree to the collection and use of information in accordance with this policy.
+
+## Information We Collect
+1. **Personal Data**: 
+   - Includes name, contact details, medical information, and login credentials.
+2. **Usage Data**:
+   - Automatically collected information such as IP address, browser type, and usage statistics.
+
+## How We Use Your Information
+- To manage and improve the hospital’s outpatient department (OPD) services.
+- To authenticate users and provide secure access to the system.
+- To store patient records securely in the hospital’s database.
+
+## Data Security
+We implement industry-standard security measures to protect your data from unauthorized access, disclosure, or destruction.
+
+## Data Sharing
+We do **not** share your personal data with third parties unless required by law or with your consent.
+
+## Changes to This Policy
+We may update this Privacy Policy periodically. You are advised to review this policy for any changes.
+
+## Contact Us
+For any questions or concerns regarding this Privacy Policy, please contact:
+- **Email**: jyotiinfotech.04@gmail.com
+- **Project Owner**: Abhishek Sharma
+
+
+
+
+# 📄 Terms and Conditions
+
+Last Updated: 13/11/2024
+
+## Acceptance of Terms
+By using the **Hospital OPD Management Project**, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use this application.
+
+## Use of the Application
+- This project is designed for managing hospital OPD operations. It is intended for use by hospital staff and administrators.
+- You must not misuse the application by attempting to access data or features without authorization.
+
+## User Accounts
+- Users must provide accurate information when creating accounts.
+- You are responsible for maintaining the confidentiality of your login credentials.
+
+## Limitation of Liability
+- The project owner is **not liable** for any damages or losses resulting from the use of this application.
+- The application is provided "as is," without warranties of any kind.
+
+## Intellectual Property
+- All content and code in this project are the intellectual property of the project owner.
+- You may not reproduce, distribute, or modify any part of this application without permission.
+
+## Modifications to Terms
+We reserve the right to update these Terms and Conditions at any time. Your continued use of the application signifies your acceptance of any changes.
+
+## Governing Law
+These terms are governed by the laws of India.
+
+## Contact Us
+For questions or feedback regarding these Terms and Conditions, please contact:
+- **Email**: jyotiinfotech.04@gmail.com
+- **Project Owner**: Abhishek Sharma
